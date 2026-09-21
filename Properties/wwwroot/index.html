@@ -1,0 +1,2397 @@
+﻿<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="color-scheme"
+          content="dark">
+
+    <title>MiniERP Enterprise Dashboard</title>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #070b14;
+            --bg-main-soft: #0b101b;
+            --bg-sidebar: #0a0f1a;
+            --bg-card: #101725;
+            --bg-card-soft: #0d1421;
+            --bg-input: #0a101b;
+            --border-color: #202b3e;
+            --border-soft: rgba(148, 163, 184, 0.10);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-primary: #6674f4;
+            --accent-hover: #5967e9;
+            --accent-soft: rgba(102, 116, 244, 0.12);
+            --success: #22c55e;
+            --success-soft: rgba(34, 197, 94, 0.11);
+            --warning: #f59e0b;
+            --warning-soft: rgba(245, 158, 11, 0.11);
+            --danger: #ef4444;
+            --danger-soft: rgba(239, 68, 68, 0.11);
+            --info: #38bdf8;
+            --info-soft: rgba(56, 189, 248, 0.11);
+            --shadow-card: 0 10px 35px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.10);
+            --shadow-hover: 0 16px 42px rgba(0, 0, 0, 0.25);
+            --radius-lg: 18px;
+            --sidebar-width: 260px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.012em;
+            background: radial-gradient( circle at 80% -10%, rgba(102, 116, 244, 0.08), transparent 30% ), radial-gradient( circle at 15% 20%, rgba(56, 189, 248, 0.025), transparent 26% ), var(--bg-main);
+            overflow-x: hidden;
+        }
+
+
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                pointer-events: none;
+                z-index: -1;
+                background-image: linear-gradient( rgba(255, 255, 255, 0.012) 1px, transparent 1px ), linear-gradient( 90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px );
+                background-size: 42px 42px;
+                mask-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.55), transparent 80% );
+            }
+
+
+        ::selection {
+            background: rgba(102, 116, 244, 0.30);
+            color: #fff;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 9px;
+            height: 9px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background: #090e18;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+            background: #263247;
+            border-radius: 99px;
+        }
+
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #33425d;
+            }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+        .card {
+            background: linear-gradient( 180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) ), var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+        }
+
+
+            .card:hover {
+                border-color: rgba(148, 163, 184, 0.16);
+            }
+
+
+        .card-header {
+            background: transparent !important;
+            border-color: var(--border-soft) !important;
+        }
+
+
+        .card-stat {
+            position: relative;
+            min-height: 126px;
+            overflow: hidden;
+        }
+
+
+            .card-stat::before {
+                content: "";
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                top: -55px;
+                right: -45px;
+                border-radius: 50%;
+                background: rgba(102, 116, 244, 0.06);
+                filter: blur(3px);
+            }
+
+
+            .card-stat::after {
+                content: "";
+                position: absolute;
+                left: 18px;
+                right: 18px;
+                bottom: 0;
+                height: 1px;
+                background: linear-gradient( 90deg, transparent, rgba(102, 116, 244, 0.45), transparent );
+                opacity: 0;
+                transition: opacity 0.25s ease;
+            }
+
+
+            .card-stat:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-hover);
+            }
+
+
+                .card-stat:hover::after {
+                    opacity: 1;
+                }
+        .login-wrapper {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 30px 15px;
+        }
+
+
+            .login-wrapper::before {
+                content: "";
+                position: absolute;
+                width: 650px;
+                height: 650px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: radial-gradient( circle, rgba(102, 116, 244, 0.10), transparent 65% );
+                pointer-events: none;
+            }
+
+
+        .login-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient( circle, rgba(99, 102, 241, 0.10) 0%, rgba(0, 0, 0, 0) 70% );
+            pointer-events: none;
+        }
+
+
+        #loginSection .col-md-4 {
+            max-width: 430px;
+        }
+
+
+        #loginSection .d-inline-flex {
+            width: 62px;
+            height: 62px;
+            padding: 0 !important;
+            border-radius: 18px !important;
+            background: linear-gradient( 145deg, rgba(102, 116, 244, 0.18), rgba(102, 116, 244, 0.05) ) !important;
+            border: 1px solid rgba(102, 116, 244, 0.20);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.06);
+        }
+
+
+        #loginSection h3 {
+            font-size: 1.65rem;
+            letter-spacing: -0.04em;
+        }
+
+
+        #loginSection .card {
+            padding: 8px !important;
+            background: linear-gradient( 180deg, rgba(255, 255, 255, 0.026), rgba(255, 255, 255, 0) ), rgba(16, 23, 37, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-color: rgba(148, 163, 184, 0.14);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+        }
+
+
+        #loginSection .card-body {
+            padding: 25px !important;
+        }
+        #loginSection .form-label {
+            margin-bottom: 8px;
+            color: #b7c0d1 !important;
+        }
+        .sidebar {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            bottom: 14px;
+            width: var(--sidebar-width);
+            height: auto;
+            background: linear-gradient( 180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) ), rgba(10, 15, 26, 0.96);
+            border: 1px solid var(--border-color) !important;
+            border-radius: 20px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            padding: 20px !important;
+            z-index: 1000;
+        }
+
+
+            .sidebar .border-bottom {
+                border-color: var(--border-soft) !important;
+            }
+
+
+            .sidebar
+            .d-flex.align-items-center.mb-4 {
+                min-height: 62px;
+                margin-bottom: 24px !important;
+            }
+
+
+                .sidebar
+                .d-flex.align-items-center.mb-4 > i {
+                    width: 43px;
+                    height: 43px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 12px;
+                    font-size: 1.15rem !important;
+                    background: var(--accent-soft);
+                    border: 1px solid rgba(102, 116, 244, 0.18);
+                    color: #8690ff !important;
+                }
+
+
+            .sidebar h6 {
+                font-size: 0.98rem;
+                letter-spacing: -0.025em;
+            }
+
+
+            .sidebar small {
+                font-size: 0.67rem;
+                letter-spacing: 0.08em;
+                color: #64748b !important;
+            }
+
+
+        .nav {
+            gap: 4px;
+        }
+
+
+        .nav-link {
+            position: relative;
+            color: #8190a7 !important;
+            border-radius: 11px;
+            padding: 12px 13px;
+            margin: 0;
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: background 0.20s ease, color 0.20s ease, transform 0.20s ease;
+        }
+
+
+            .nav-link i {
+                width: 21px;
+                margin-right: 12px !important;
+                text-align: center;
+                color: #627089;
+            }
+
+
+            .nav-link:hover {
+                color: #f8fafc !important;
+                background: rgba(255, 255, 255, 0.035);
+                transform: translateX(2px);
+            }
+
+
+                .nav-link:hover i {
+                    color: #a7afff;
+                }
+
+
+            .nav-link.active {
+                color: #ffffff !important;
+                background: linear-gradient( 90deg, rgba(102, 116, 244, 0.19), rgba(102, 116, 244, 0.07) ) !important;
+                border: 1px solid rgba(102, 116, 244, 0.16);
+            }
+
+
+                .nav-link.active::before {
+                    content: "";
+                    position: absolute;
+                    left: -1px;
+                    top: 10px;
+                    bottom: 10px;
+                    width: 3px;
+                    border-radius: 0 5px 5px 0;
+                    background: #7b84ff;
+                }
+
+
+                .nav-link.active i {
+                    color: #8d95ff;
+                }
+
+
+        .sidebar .btn-outline-danger {
+            min-height: 42px;
+            border-color: rgba(239, 68, 68, 0.20) !important;
+            background: rgba(239, 68, 68, 0.045);
+            color: #c98d92;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+
+
+            .sidebar
+            .btn-outline-danger:hover {
+                background: rgba(239, 68, 68, 0.10);
+                border-color: rgba(239, 68, 68, 0.32) !important;
+                color: #ff9a9f;
+            }
+        .main-content {
+            margin-left: calc(var(--sidebar-width) + 32px);
+            padding: 28px 30px 36px 0;
+            min-height: 100vh;
+            max-width: 1700px;
+        }
+
+
+        #pageTitle {
+            font-size: 1.42rem;
+            letter-spacing: -0.035em;
+        }
+
+
+        #pageSubtitle {
+            color: #728098 !important;
+        }
+
+
+        .main-content >
+        .d-flex.justify-content-between {
+            position: relative;
+            padding: 18px 2px 20px !important;
+            margin-bottom: 24px !important;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.08) !important;
+        }
+
+
+            .main-content >
+            .d-flex.justify-content-between::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                width: 72px;
+                height: 1px;
+                background: #727cff;
+            }
+
+
+        .user-avatar {
+            background: var(--accent-soft) !important;
+            border: 1px solid rgba(102, 116, 244, 0.18);
+            color: #8f98ff !important;
+        }
+        .warehouse-filter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .warehouse-filter-label {
+            color: #94a3b8;
+            font-size: 0.76rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+
+            .warehouse-filter-label i {
+                color: #8d95ff;
+            }
+
+
+        #depoSelect {
+            width: 200px;
+            min-height: 43px;
+            cursor: pointer;
+            background: var(--bg-input) !important;
+            border: 1px solid #243047 !important;
+            color: #f1f5f9 !important;
+            border-radius: 10px;
+            padding: 0.67rem 0.9rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+            #depoSelect:hover {
+                border-color: #35435f !important;
+            }
+
+
+            #depoSelect:focus {
+                border-color: #6975ef !important;
+                background: #0b111d !important;
+                box-shadow: 0 0 0 3px rgba(102, 116, 244, 0.13) !important;
+                outline: none;
+            }
+
+
+            #depoSelect option {
+                background: #101725;
+                color: #f8fafc;
+            }
+        .row.g-3.mb-4 {
+            --bs-gutter-x: 14px;
+            --bs-gutter-y: 14px;
+        }
+
+
+        .card-stat .text-secondary {
+            color: #75829a !important;
+            font-size: 0.72rem !important;
+        }
+
+
+        .card-stat h3 {
+            font-size: 1.65rem;
+            letter-spacing: -0.04em;
+        }
+
+
+        .card-stat .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+
+        .stat-icon.bg-primary {
+            background: var(--accent-soft) !important;
+        }
+
+
+        .stat-icon.bg-warning {
+            background: var(--warning-soft) !important;
+        }
+
+
+        .stat-icon.bg-success {
+            background: var(--success-soft) !important;
+        }
+
+
+        .stat-icon.bg-info {
+            background: var(--info-soft) !important;
+        }
+        .table {
+            --bs-table-bg: transparent;
+            --bs-table-color: #dfe6f1;
+            --bs-table-border-color: var(--border-soft);
+            margin: 0;
+        }
+
+
+            .table thead th {
+                padding: 13px 14px;
+                background: rgba(7, 11, 20, 0.32);
+                color: #68768d !important;
+                font-size: 0.67rem;
+                font-weight: 700;
+                letter-spacing: 0.075em;
+                text-transform: uppercase;
+                white-space: nowrap;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+            }
+
+
+                .table thead th:first-child {
+                    padding-left: 20px;
+                }
+
+
+            .table tbody td {
+                padding: 15px 14px;
+                color: #cdd6e3;
+                font-size: 0.82rem;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.065);
+                vertical-align: middle;
+            }
+
+
+        .table-hover tbody tr:hover {
+            background: rgba(102, 116, 244, 0.034);
+        }
+
+
+        .table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .stock-status-wrapper {
+            min-width: 220px;
+        }
+
+
+        .stock-status-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 7px;
+        }
+
+
+        .stock-status-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.64rem;
+            font-weight: 800;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+        }
+
+
+            .stock-status-label i {
+                font-size: 0.48rem;
+            }
+
+
+        .status-critical {
+            color: #ff8f8f;
+            background: rgba(239, 68, 68, 0.09);
+            border-color: rgba(239, 68, 68, 0.18);
+        }
+
+
+        .status-low {
+            color: #f9c56b;
+            background: rgba(245, 158, 11, 0.09);
+            border-color: rgba(245, 158, 11, 0.18);
+        }
+
+
+        .status-normal {
+            color: #6ee7a0;
+            background: rgba(34, 197, 94, 0.09);
+            border-color: rgba(34, 197, 94, 0.18);
+        }
+
+
+        .stock-percentage {
+            color: #7d8ba1;
+            font-size: 0.67rem;
+            font-weight: 700;
+        }
+
+
+        .stock-progress {
+            width: 100%;
+            height: 7px;
+            background: #1a2434;
+            border: none;
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+
+            .stock-progress .progress-bar {
+                height: 100%;
+                min-width: 0;
+                border-radius: 99px;
+                transition: width 0.45s ease;
+            }
+
+
+            .stock-progress .bg-danger {
+                background: linear-gradient( 90deg, #dc2626, #f05252 ) !important;
+                box-shadow: 0 0 10px rgba(239, 68, 68, 0.25);
+            }
+
+
+            .stock-progress .bg-warning {
+                background: linear-gradient( 90deg, #d97706, #f59e0b ) !important;
+                box-shadow: 0 0 10px rgba(245, 158, 11, 0.17);
+            }
+
+
+            .stock-progress .bg-success {
+                background: linear-gradient( 90deg, #16a34a, #22c55e ) !important;
+                box-shadow: 0 0 10px rgba(34, 197, 94, 0.15);
+            }
+
+
+        .stock-value {
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #66758b;
+            font-size: 0.64rem;
+        }
+
+
+            .stock-value strong {
+                color: #cbd5e1;
+                font-weight: 700;
+            }
+
+
+        .stock-cell-enhanced {
+            min-width: 250px;
+        }
+        .badge {
+            padding: 6px 9px !important;
+            border-radius: 7px !important;
+            font-size: 0.68rem;
+            font-weight: 700;
+        }
+
+
+            .badge.bg-success {
+                background: var(--success-soft) !important;
+                color: #6ee7a0 !important;
+            }
+
+
+            .badge.bg-warning {
+                background: var(--warning-soft) !important;
+                color: #fbc866 !important;
+            }
+
+
+            .badge.bg-danger {
+                background: var(--danger-soft) !important;
+                color: #fb8c8c !important;
+            }
+        .btn {
+            border-radius: 9px;
+            font-weight: 600;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+        }
+
+
+            .btn:hover {
+                transform: translateY(-1px);
+            }
+
+
+        .btn-primary {
+            background: linear-gradient( 135deg, #6d78f4, #5967e9 );
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: white;
+            box-shadow: 0 7px 20px rgba(89, 103, 233, 0.18);
+        }
+
+
+            .btn-primary:hover {
+                background: linear-gradient( 135deg, #7781fa, #6270ef );
+                color: white;
+                box-shadow: 0 10px 24px rgba(89, 103, 233, 0.28);
+            }
+
+
+        .btn-success {
+            background: #1d9e55;
+            border-color: #249f58;
+        }
+
+
+            .btn-success:hover {
+                background: #22ad60;
+                border-color: #22ad60;
+            }
+
+
+        .btn-outline-danger {
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.35);
+        }
+
+
+            .btn-outline-danger:hover {
+                background: rgba(239, 68, 68, 0.09);
+                color: #ff9090;
+            }
+
+
+        .btn-outline-secondary {
+            color: #a6b1c1;
+            border-color: #303b4f;
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+
+            .btn-outline-secondary:hover {
+                background: rgba(255, 255, 255, 0.045);
+                color: #e6ebf2;
+            }
+        .form-control,
+        .form-select {
+            min-height: 43px;
+            background: var(--bg-input) !important;
+            border: 1px solid #243047 !important;
+            color: #f1f5f9 !important;
+            border-radius: 10px;
+            padding: 0.67rem 0.9rem;
+            font-size: 0.82rem;
+        }
+
+
+            .form-control::placeholder {
+                color: #59677d;
+            }
+
+
+            .form-control:focus,
+            .form-select:focus {
+                border-color: #6975ef !important;
+                background: #0b111d !important;
+                box-shadow: 0 0 0 3px rgba(102, 116, 244, 0.13) !important;
+                outline: none;
+            }
+
+
+        .input-group-text {
+            background: #0b111d !important;
+            border-color: #243047 !important;
+            color: #67758c !important;
+        }
+
+
+        #searchInput {
+            border-left: none !important;
+        }
+
+        #tab-reports .card {
+            min-height: 225px;
+        }
+
+
+        #tab-reports
+        .p-4.rounded-3 {
+            position: relative;
+            background: linear-gradient( 145deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) ) !important;
+            border-color: rgba(148, 163, 184, 0.09) !important;
+        }
+
+        .modal-content {
+            background: linear-gradient( 180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0) ), var(--bg-card) !important;
+            border: 1px solid #27334a !important;
+            border-radius: 18px !important;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+        }
+
+
+        .modal-header,
+        .modal-footer {
+            border-color: var(--border-soft) !important;
+        }
+        .tab-content:not(.d-none) {
+            animation: fadeUp 0.22s ease both;
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1199px) {
+
+            :root {
+                --sidebar-width: 230px;
+            }
+
+
+            .main-content {
+                margin-left: calc( var(--sidebar-width) + 25px );
+                padding-right: 20px;
+            }
+        }
+
+
+        @media (max-width: 991px) {
+
+            .sidebar {
+                position: relative;
+                top: 0;
+                left: 0;
+                bottom: auto;
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+
+
+            .main-content {
+                margin-left: 0;
+                padding: 10px 20px 28px;
+            }
+
+
+            .sidebar .nav {
+                display: grid;
+                grid-template-columns: repeat( 2, minmax(0, 1fr) );
+            }
+
+
+            .warehouse-filter {
+                width: 100%;
+            }
+
+
+            #depoSelect {
+                width: 210px;
+            }
+        }
+
+
+        @media (max-width: 767px) {
+
+            .sidebar .nav {
+                grid-template-columns: 1fr;
+            }
+
+
+            .main-content {
+                padding: 6px 12px 24px;
+            }
+
+
+                .main-content >
+                .d-flex.justify-content-between {
+                    align-items: flex-start !important;
+                    flex-direction: column;
+                    gap: 18px;
+                }
+
+
+                .main-content
+                .d-flex.align-items-center.gap-4 {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+
+
+            .warehouse-filter {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+
+            #depoSelect {
+                width: 220px;
+            }
+
+
+            #pageTitle {
+                font-size: 1.22rem;
+            }
+
+
+            .stock-status-wrapper {
+                min-width: 190px;
+            }
+        }
+
+
+        @media (max-width: 575px) {
+
+            .sidebar {
+                width: calc(100% - 16px);
+                margin: 8px;
+            }
+
+            .main-content {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+
+            .card {
+                border-radius: 15px;
+            }
+
+
+            .main-content
+            .d-flex.align-items-center.gap-4 {
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+
+
+            .warehouse-filter {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 7px;
+            }
+
+
+            #depoSelect {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="loginSection"
+         class="login-wrapper container d-flex align-items-center justify-content-center min-vh-100">
+
+        <div class="login-glow"></div>
+
+
+        <div class="col-md-4 position-relative"
+             style="z-index:1;">
+
+
+            <div class="text-center mb-4">
+
+                <div class="d-inline-flex align-items-center justify-content-center bg-indigo bg-opacity-10 p-3 rounded-circle mb-2">
+
+                    <i class="fa-solid fa-cubes text-primary fs-2"></i>
+
+                </div>
+
+
+                <h3 class="fw-bold text-white mb-1">
+
+                    MiniERP Platform
+
+                </h3>
+
+
+                <p class="text-secondary small mb-0">
+
+                    Kurumsal Yönetim Paneline Giriş Yapın
+
+                </p>
+
+            </div>
+
+
+            <div class="card p-4 shadow-lg">
+
+                <div class="card-body p-2">
+
+
+                    <div class="mb-3">
+
+                        <label for="username"
+                               class="form-label text-secondary small fw-semibold">
+
+                            E-Posta Adresi
+
+                        </label>
+
+
+                        <input type="text"
+                               id="username"
+                               class="form-control"
+                               value="admin@minierp.com">
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label for="password"
+                               class="form-label text-secondary small fw-semibold">
+
+                            Parola
+
+                        </label>
+
+
+                        <input type="password"
+                               id="password"
+                               class="form-control"
+                               value="123456">
+
+                    </div>
+
+
+                    <button class="btn btn-primary w-100 py-2.5"
+                            onclick="login()">
+
+                        <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>
+
+                        Sisteme Giriş Yap
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="mainSection"
+         class="d-none">
+
+
+        <aside class="sidebar p-4 d-flex flex-column justify-content-between">
+
+
+            <div>
+
+
+                <div class="d-flex align-items-center mb-4 pb-2 px-2 border-bottom border-secondary border-opacity-10">
+
+                    <i class="fa-solid fa-cubes text-primary fs-3 me-3"></i>
+
+
+                    <div>
+
+                        <h6 class="fw-bold text-white mb-0">
+
+                            MiniERP
+
+                        </h6>
+
+
+                        <small class="text-secondary">
+
+                            ENTERPRISE v1.0
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <nav class="nav flex-column">
+
+
+                    <a class="nav-link active"
+                       onclick="switchTab('dashboard', event)">
+
+                        <i class="fa-solid fa-chart-pie me-3"></i>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       onclick="switchTab('products', event)">
+
+                        <i class="fa-solid fa-box-archive me-3"></i>
+
+                        Ürün Yönetimi
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       onclick="switchTab('orders', event)">
+
+                        <i class="fa-solid fa-receipt me-3"></i>
+
+                        Siparişler
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       onclick="switchTab('requests', event)">
+
+                        <i class="fa-solid fa-code-pull-request me-3"></i>
+
+                        Talepler
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       onclick="switchTab('reports', event)">
+
+                        <i class="fa-solid fa-chart-line me-3"></i>
+
+                        Raporlar
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div>
+
+                <button class="btn btn-outline-danger btn-sm w-100 border-opacity-25"
+                        onclick="logout()">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+
+                    Güvenli Çıkış
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        
+
+        <main class="main-content">
+
+
+            
+
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary border-opacity-10">
+
+
+                <div>
+
+                    <h4 id="pageTitle"
+                        class="fw-bold mb-1">
+
+                        Genel Bakış & Stok Paneli
+
+                    </h4>
+
+
+                    <p id="pageSubtitle"
+                       class="text-secondary small mb-0">
+
+                        Sistemdeki anlık stok hareketleri ve özet veriler
+
+                    </p>
+
+                </div>
+
+
+                <div class="d-flex align-items-center gap-4">
+
+
+                    
+
+                    <div class="warehouse-filter">
+
+                        <label for="depoSelect"
+                               class="warehouse-filter-label">
+
+                            <i class="fa-solid fa-warehouse me-1"></i>
+
+                            Aktif Depo
+
+                        </label>
+
+
+                        <select id="depoSelect"
+                                class="form-select"
+                                onchange="depoDegisti()">
+
+                            <option value="">
+
+                                Tüm Depolar
+
+                            </option>
+
+                            <option value="1">
+
+                                Merkez Depo
+
+                            </option>
+
+                            <option value="2">
+
+                                Şube Depo
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    
+
+                    <div class="text-end">
+
+                        <div class="fw-semibold small">
+
+                            Admin Kullanıcısı
+
+                        </div>
+
+
+                        <div class="text-secondary small">
+
+                            Sistem Yöneticisi
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-icon user-avatar bg-primary bg-opacity-10 text-primary rounded-circle"
+                         style="width:40px;height:40px;">
+
+                        <i class="fa-solid fa-user-shield fs-6"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+            <div id="tab-dashboard"
+                 class="tab-content">
+
+
+                <div class="row g-3 mb-4">
+
+
+                  
+
+                    <div class="col-md-3">
+
+                        <div class="card card-stat p-3">
+
+                            <div class="d-flex align-items-center justify-content-between">
+
+
+                                <div>
+
+                                    <span class="text-secondary small fw-semibold">
+
+                                        Toplam Ürün
+
+                                    </span>
+
+
+                                    <h3 id="statTotalProducts"
+                                        class="fw-bold mb-0 text-white mt-1">
+
+                                        0
+
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BEKLEYEN TALEPLER -->
+
+                    <div class="col-md-3">
+
+                        <div class="card card-stat p-3">
+
+                            <div class="d-flex align-items-center justify-content-between">
+
+
+                                <div>
+
+                                    <span class="text-secondary small fw-semibold">
+
+                                        Bekleyen Talepler
+
+                                    </span>
+
+
+                                    <h3 id="statPendingRequests"
+                                        class="fw-bold mb-0 text-white mt-1">
+
+                                        0
+
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+
+                                    <i class="fa-solid fa-hourglass-half"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                   
+
+                    <div class="col-md-3">
+
+                        <div class="card card-stat p-3">
+
+                            <div class="d-flex align-items-center justify-content-between">
+
+
+                                <div>
+
+                                    <span class="text-secondary small fw-semibold">
+
+                                        Toplam Sipariş
+
+                                    </span>
+
+
+                                    <h3 id="statTotalOrders"
+                                        class="fw-bold mb-0 text-white mt-1">
+
+                                        0
+
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="stat-icon bg-success bg-opacity-10 text-success">
+
+                                    <i class="fa-solid fa-truck-ramp-box"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                   
+
+                    <div class="col-md-3">
+
+                        <div class="card card-stat p-3">
+
+                            <div class="d-flex align-items-center justify-content-between">
+
+
+                                <div>
+
+                                    <span class="text-secondary small fw-semibold">
+
+                                        Döviz Kurları (USD)
+
+                                    </span>
+
+
+                                    <div id="statExchangeRates"
+                                         class="fw-bold text-info small mt-2">
+
+                                        Yükleniyor...
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="stat-icon bg-info bg-opacity-10 text-info">
+
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="card">
+
+
+                    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+
+                        <h6 class="mb-0 fw-bold text-white">
+
+                            <i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>
+
+                            Kritik Stok Seviyesindeki Ürünler
+
+                        </h6>
+
+                    </div>
+
+
+                    <div class="card-body p-0">
+
+                        <div class="table-responsive">
+
+
+                            <table class="table table-hover align-middle mb-0">
+
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th class="ps-4">
+
+                                            ID
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Ürün Adı
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Ürün Kodu
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Min. Stok
+
+                                        </th>
+
+
+                                        <th class="py-3 px-4">
+
+                                            MEVCUT STOK
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Stok Durumu
+
+                                        </th>
+
+
+                                        <th class="text-end pe-4">
+
+                                            İşlem
+
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="criticalStockTableBody">
+                                </tbody>
+
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+            <div id="tab-products"
+                 class="tab-content d-none">
+
+
+                <div class="card mb-5">
+
+
+                    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+
+
+                        <h6 class="mb-0 fw-bold text-white">
+
+                            <i class="fa-solid fa-list-check me-2"></i>
+
+                            Tüm Ürün Envanteri
+
+                        </h6>
+
+
+                        <button class="btn btn-primary btn-sm px-3"
+                                onclick="openAddModal()">
+
+                            <i class="fa-solid fa-plus me-2"></i>
+
+                            Yeni Ürün Ekle
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="card-body">
+
+
+                       
+
+                        <div class="row mb-3">
+
+
+                            <div class="col-md-4">
+
+                                <div class="input-group">
+
+
+                                    <span class="input-group-text">
+
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                                    </span>
+
+
+                                    <input type="text"
+                                           id="searchInput"
+                                           class="form-control"
+                                           placeholder="Ürün adı veya koduna göre ara..."
+                                           onkeyup="filterProducts()">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        
+
+                        <div class="table-responsive">
+
+
+                            <table class="table table-hover align-middle mb-0">
+
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+
+                                            ID
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Ürün Adı
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Ürün Kodu
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Fiyat
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Min. Stok
+
+                                        </th>
+
+
+                                        <th style="width:25%;">
+
+                                            Stok Durumu
+
+                                        </th>
+
+
+                                        <th class="text-end">
+
+                                            İşlemler
+
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="productTableBody">
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+
+            <div id="tab-orders"
+                 class="tab-content d-none">
+
+
+                <div class="card">
+
+
+                    <div class="card-header py-3">
+
+                        <h6 class="mb-0 fw-bold text-white">
+
+                            <i class="fa-solid fa-clock-rotate-left me-2"></i>
+
+                            Müşteri Sipariş Geçmişi
+
+                        </h6>
+
+                    </div>
+
+
+                    <div class="card-body p-0">
+
+
+                        <div class="table-responsive">
+
+
+                            <table class="table table-hover align-middle mb-0">
+
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th class="ps-4">
+
+                                            Sipariş No
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Müşteri / Firma
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Tarih
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Toplam Tutar
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Durum
+
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <tr>
+
+                                        <td class="ps-4 font-monospace text-primary">
+
+                                            #ORD-9821
+
+                                        </td>
+
+
+                                        <td class="fw-semibold">
+
+                                            Kapadokya Teknoloji A.Ş.
+
+                                        </td>
+
+
+                                        <td class="text-secondary">
+
+                                            17.09.2026
+
+                                        </td>
+
+
+                                        <td class="fw-bold">
+
+                                            45.500 ₺
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="badge bg-success">
+
+                                                Tamamlandı
+
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td class="ps-4 font-monospace text-primary">
+
+                                            #ORD-9822
+
+                                        </td>
+
+
+                                        <td class="fw-semibold">
+
+                                            Nevşehir Lojistik Ltd.
+
+                                        </td>
+
+
+                                        <td class="text-secondary">
+
+                                            16.09.2026
+
+                                        </td>
+
+
+                                        <td class="fw-bold">
+
+                                            12.300 ₺
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="badge bg-warning">
+
+                                                Hazırlanıyor
+
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+            <div id="tab-requests"
+                 class="tab-content d-none">
+
+
+                <div class="card">
+
+
+                    <div class="card-header py-3">
+
+                        <h6 class="mb-0 fw-bold text-white">
+
+                            <i class="fa-solid fa-cart-flatbed me-2"></i>
+
+                            Satın Alma Talepleri
+
+                        </h6>
+
+                    </div>
+
+
+                    <div class="card-body p-0">
+
+
+                        <div class="table-responsive">
+
+
+                            <table class="table table-hover align-middle mb-0">
+
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th class="ps-4">
+
+                                            Talep ID
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Talep Eden Depo
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Talep Edilen Ürün
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Miktar
+
+                                        </th>
+
+
+                                        <th>
+
+                                            Durum
+
+                                        </th>
+
+
+                                        <th class="text-end pe-4">
+
+                                            İşlem
+
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <tr>
+
+                                        <td class="ps-4 font-monospace text-primary">
+
+                                            #REQ-104
+
+                                        </td>
+
+
+                                        <td>
+
+                                            Ana Depo (Nevşehir)
+
+                                        </td>
+
+
+                                        <td class="fw-semibold">
+
+                                            Klavye (PRD003)
+
+                                        </td>
+
+
+                                        <td>
+
+                                            50 Adet
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span id="req-status-104"
+                                                  class="badge bg-warning">
+
+                                                Onay Bekliyor
+
+                                            </span>
+
+                                        </td>
+
+
+                                        <td class="text-end pe-4">
+
+
+                                            <button class="btn btn-sm btn-success me-1 px-3"
+                                                    onclick="approveRequest(104)">
+
+                                                <i class="fa-solid fa-check me-1"></i>
+
+                                                Onayla
+
+                                            </button>
+
+
+                                            <button class="btn btn-sm btn-outline-danger"
+                                                    onclick="rejectRequest(104)">
+
+                                                <i class="fa-solid fa-xmark"></i>
+
+                                            </button>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div id="tab-reports"
+                 class="tab-content d-none">
+
+
+                <div class="row g-4">
+
+
+                   
+
+                    <div class="col-md-6">
+
+                        <div class="card p-4">
+
+
+                            <h6 class="fw-bold text-white mb-2">
+
+                                <i class="fa-solid fa-chart-line text-primary me-2"></i>
+
+                                Aylık Satış Özetleri
+
+                            </h6>
+
+
+                            <p class="text-secondary small mb-4">
+
+                                Sistem genelinde yapılan toplam ürün satış analizleri.
+
+                            </p>
+
+
+                            <div class="p-4 rounded-3 border border-secondary border-opacity-10 text-center">
+
+
+                                <h2 class="text-success fw-bold mb-1">
+
+                                    128.000 ₺
+
+                                </h2>
+
+
+                                <span class="text-secondary small">
+
+                                    Bu Ayki Toplam Ciro
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                   
+
+                    <div class="col-md-6">
+
+                        <div class="card p-4">
+
+
+                            <h6 class="fw-bold text-white mb-2">
+
+                                <i class="fa-solid fa-warehouse text-warning me-2"></i>
+
+                                Depo Verimlilik Oranı
+
+                            </h6>
+
+
+                            <p class="text-secondary small mb-4">
+
+                                Stok devir hızı ve depo kullanım istatistikleri.
+
+                            </p>
+
+
+                            <div class="p-4 rounded-3 border border-secondary border-opacity-10 text-center">
+
+
+                                <h2 class="text-info fw-bold mb-1">
+
+                                    %84.2
+
+                                </h2>
+
+
+                                <span class="text-secondary small">
+
+                                    Ortalama Depo Doluluğu
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    
+    <div class="modal fade"
+         id="productModal"
+         tabindex="-1"
+         aria-hidden="true">
+
+
+        <div class="modal-dialog modal-dialog-centered">
+
+
+            <div class="modal-content text-white">
+
+
+                <div class="modal-header">
+
+
+                    <h6 class="modal-title fw-bold"
+                        id="productModalTitle">
+
+                        Yeni Ürün Ekle
+
+                    </h6>
+
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Kapat">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body p-4">
+
+
+                    <input type="hidden"
+                           id="modalProductId">
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label small text-secondary fw-semibold">
+
+                            Ürün Adı
+
+                        </label>
+
+
+                        <input type="text"
+                               id="modalProductName"
+                               class="form-control"
+                               placeholder="Örn: Kablosuz Mouse">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label small text-secondary fw-semibold">
+
+                            Ürün Kodu
+
+                        </label>
+
+
+                        <input type="text"
+                               id="modalProductCode"
+                               class="form-control"
+                               placeholder="Örn: PRD005">
+
+                    </div>
+
+
+                    <div class="row">
+
+
+                        <div class="col-md-4 mb-3">
+
+                            <label class="form-label small text-secondary fw-semibold">
+
+                                Fiyat (₺)
+
+                            </label>
+
+
+                            <input type="number"
+                                   id="modalUnitPrice"
+                                   class="form-control"
+                                   placeholder="0.00">
+
+                        </div>
+
+
+                        <div class="col-md-4 mb-3">
+
+                            <label class="form-label small text-secondary fw-semibold">
+
+                                Mevcut Stok
+
+                            </label>
+
+
+                            <input type="number"
+                                   id="modalStockQuantity"
+                                   class="form-control"
+                                   placeholder="0">
+
+                        </div>
+
+
+                        <div class="col-md-4 mb-3">
+
+                            <label class="form-label small text-secondary fw-semibold">
+
+                                Min. Stok
+
+                            </label>
+
+
+                            <input type="number"
+                                   id="modalMinStock"
+                                   class="form-control"
+                                   placeholder="5">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+
+                    <button type="button"
+                            class="btn btn-outline-secondary btn-sm"
+                            data-bs-dismiss="modal">
+
+                        İptal
+
+                    </button>
+
+
+                    <button type="button"
+                            class="btn btn-primary btn-sm px-3"
+                            onclick="saveProduct()">
+
+                        <i class="fa-solid fa-floppy-disk me-2"></i>
+
+                        Kaydet
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+
+    <script src="app.js?v=200"></script>
+
+
+    
+    <script>
+
+        function depoDegisti() {
+
+            const depoSelect =
+                document.getElementById(
+                    'depoSelect'
+                );
+
+            if (!depoSelect) {
+
+                return;
+            }
+
+
+            const depoId =
+                depoSelect.value;
+
+
+            
+
+            document.dispatchEvent(
+                new CustomEvent(
+                    'depoChanged',
+                    {
+                        detail: {
+                            depoId: depoId
+                        }
+                    }
+                )
+            );
+
+
+            console.log(
+                'Seçilen depo ID:',
+                depoId
+            );
+        }
+
+    </script>
+
+
+</body>
+
+</html>

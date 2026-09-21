@@ -1,0 +1,337 @@
+2026-09-21 08:07:51.107 +03:00 [INF] MiniERP API Başlatılıyor...
+2026-09-21 08:07:55.709 +03:00 [INF] User profile is available. Using 'C:\Users\emine\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-21 08:07:57.471 +03:00 [INF] Now listening on: https://localhost:7266
+2026-09-21 08:07:57.575 +03:00 [INF] Now listening on: http://localhost:5257
+2026-09-21 08:07:58.008 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-21 08:07:58.124 +03:00 [INF] Hosting environment: Development
+2026-09-21 08:07:58.207 +03:00 [INF] Content root path: C:\Users\emine\source\repos\MiniERP.API\MiniERP.API
+2026-09-21 08:08:20.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/ - null null
+2026-09-21 08:08:29.245 +03:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\Users\emine\source\repos\MiniERP.API\MiniERP.API\wwwroot\index.html'
+2026-09-21 08:08:29.383 +03:00 [INF] HTTP GET /index.html responded 200 in 1598.9717 ms
+2026-09-21 08:08:29.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-21 08:08:29.472 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/app.js?v=200 - null null
+2026-09-21 08:08:29.555 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/index.html - 200 null text/html 8935.0947ms
+2026-09-21 08:08:29.597 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_vs/browserLink - null null
+2026-09-21 08:08:29.599 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 134.7007ms
+2026-09-21 08:08:30.247 +03:00 [INF] Sending file. Request path: '/app.js'. Physical path: 'C:\Users\emine\source\repos\MiniERP.API\MiniERP.API\wwwroot\app.js'
+2026-09-21 08:08:30.278 +03:00 [INF] HTTP GET /app.js responded 200 in 680.5991 ms
+2026-09-21 08:08:30.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/app.js?v=200 - 200 67788 text/javascript 819.3007ms
+2026-09-21 08:08:34.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5099.6179ms
+2026-09-21 08:08:36.412 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/favicon.ico - null null
+2026-09-21 08:08:36.438 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 13.9161 ms
+2026-09-21 08:08:36.447 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/favicon.ico - 404 0 null 35.1534ms
+2026-09-21 08:08:36.502 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7266/favicon.ico, Response status code: 404
+2026-09-21 08:10:18.405 +03:00 [INF] MiniERP API Başlatılıyor...
+2026-09-21 08:10:22.657 +03:00 [INF] User profile is available. Using 'C:\Users\emine\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-21 08:10:23.459 +03:00 [INF] Now listening on: https://localhost:7266
+2026-09-21 08:10:23.473 +03:00 [INF] Now listening on: http://localhost:5257
+2026-09-21 08:10:24.356 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-21 08:10:24.389 +03:00 [INF] Hosting environment: Development
+2026-09-21 08:10:24.406 +03:00 [INF] Content root path: C:\Users\emine\source\repos\MiniERP.API\MiniERP.API
+2026-09-21 08:10:25.257 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/ - null null
+2026-09-21 08:10:25.896 +03:00 [INF] The file /index.html was not modified
+2026-09-21 08:10:25.910 +03:00 [INF] HTTP GET /index.html responded 304 in 242.5330 ms
+2026-09-21 08:10:25.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/index.html - 304 null text/html 712.4942ms
+2026-09-21 08:10:26.330 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-21 08:10:26.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_vs/browserLink - null null
+2026-09-21 08:10:26.519 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 188.2142ms
+2026-09-21 08:10:26.958 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_vs/browserLink - 200 null text/javascript; charset=UTF-8 626.7768ms
+2026-09-21 08:10:34.854 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7266/api/Auth/login - application/json 51
+2026-09-21 08:10:34.998 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 08:10:35.155 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniERP.API.DTOs.LoginDto) on controller MiniERP.API.Controllers.AuthController (MiniERP.API).
+2026-09-21 08:10:42.712 +03:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:10:43.187 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:10:43.191 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:10:43.194 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:11:12.197 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7266/api/Auth/login - application/json 51
+2026-09-21 08:11:12.306 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 08:11:12.382 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniERP.API.DTOs.LoginDto) on controller MiniERP.API.Controllers.AuthController (MiniERP.API).
+2026-09-21 08:11:19.173 +03:00 [INF] Executed DbCommand (28,002ms) [Parameters=[@loginDto_Email='?' (Size = 4000), @loginDto_Password='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[RoleId], [r].[Id], [r].[RoleName]
+FROM [Users] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[Email] = @loginDto_Email AND [u].[PasswordHash] = @loginDto_Password
+2026-09-21 08:11:19.174 +03:00 [INF] Executed DbCommand (214ms) [Parameters=[@loginDto_Email='?' (Size = 4000), @loginDto_Password='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[RoleId], [r].[Id], [r].[RoleName]
+FROM [Users] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[Email] = @loginDto_Email AND [u].[PasswordHash] = @loginDto_Password
+2026-09-21 08:11:19.711 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-21 08:11:19.711 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-21 08:11:19.760 +03:00 [INF] Executed action MiniERP.API.Controllers.AuthController.Login (MiniERP.API) in 44568.169ms
+2026-09-21 08:11:19.760 +03:00 [INF] Executed action MiniERP.API.Controllers.AuthController.Login (MiniERP.API) in 7303.3769ms
+2026-09-21 08:11:19.773 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 08:11:19.773 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 08:11:19.785 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 7549.0744 ms
+2026-09-21 08:11:19.785 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 44855.2693 ms
+2026-09-21 08:11:19.800 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/Products - null null
+2026-09-21 08:11:19.806 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7266/api/Auth/login - 200 null application/json; charset=utf-8 7615.1818ms
+2026-09-21 08:11:19.806 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7266/api/Auth/login - 200 null application/json; charset=utf-8 44953.8864ms
+2026-09-21 08:11:20.013 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API)'
+2026-09-21 08:11:20.053 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MiniERP.API.DTOs.ProductDto]]] GetProducts() on controller MiniERP.API.Controllers.ProductsController (MiniERP.API).
+2026-09-21 08:11:24.664 +03:00 [INF] Executed DbCommand (3,787ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[DepoId], [p].[MinStockQuantity], [p].[MinimumStock], [p].[ProductCode], [p].[ProductName], [p].[StockQuantity], [p].[UnitPrice]
+FROM [Products] AS [p]
+2026-09-21 08:11:25.432 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MiniERP.API.DTOs.ProductDto, MiniERP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-21 08:11:26.904 +03:00 [INF] Executed action MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API) in 6829.6328ms
+2026-09-21 08:11:26.911 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API)'
+2026-09-21 08:11:26.915 +03:00 [INF] HTTP GET /api/Products responded 200 in 7104.9567 ms
+2026-09-21 08:11:26.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/Products - 200 null application/json; charset=utf-8 7122.2738ms
+2026-09-21 08:11:26.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/Products - null null
+2026-09-21 08:11:26.961 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API)'
+2026-09-21 08:11:26.964 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MiniERP.API.DTOs.ProductDto]]] GetProducts() on controller MiniERP.API.Controllers.ProductsController (MiniERP.API).
+2026-09-21 08:11:27.660 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/PurchaseRequests - null null
+2026-09-21 08:11:27.779 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API)'
+2026-09-21 08:11:27.851 +03:00 [INF] Route matched with {action = "GetAll", controller = "PurchaseRequests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MiniERP.API.DTOs.PurchaseRequestDto]]] GetAll() on controller MiniERP.API.Controllers.PurchaseRequestsController (MiniERP.API).
+2026-09-21 08:11:28.163 +03:00 [INF] Executed DbCommand (1,087ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[DepoId], [p].[MinStockQuantity], [p].[MinimumStock], [p].[ProductCode], [p].[ProductName], [p].[StockQuantity], [p].[UnitPrice]
+FROM [Products] AS [p]
+2026-09-21 08:11:28.239 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MiniERP.API.DTOs.ProductDto, MiniERP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-21 08:11:28.262 +03:00 [INF] Executed action MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API) in 1294.3329ms
+2026-09-21 08:11:28.267 +03:00 [INF] Executed DbCommand (212ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[Description], [p].[ProductId], [p].[Quantity], [p].[RejectionReason], [p].[RequestDate], [p].[RequestNo], [p].[RequestedByUserId], [p].[Status], [p0].[Id], [p0].[CategoryId], [p0].[DepoId], [p0].[MinStockQuantity], [p0].[MinimumStock], [p0].[ProductCode], [p0].[ProductName], [p0].[StockQuantity], [p0].[UnitPrice]
+FROM [PurchaseRequests] AS [p]
+INNER JOIN [Products] AS [p0] ON [p].[ProductId] = [p0].[Id]
+2026-09-21 08:11:28.272 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API)'
+2026-09-21 08:11:28.279 +03:00 [INF] HTTP GET /api/Products responded 200 in 1320.2938 ms
+2026-09-21 08:11:28.430 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MiniERP.API.DTOs.PurchaseRequestDto, MiniERP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-21 08:11:28.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/Products - 200 null application/json; charset=utf-8 1494.2622ms
+2026-09-21 08:11:28.507 +03:00 [INF] Executed action MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API) in 650.1953ms
+2026-09-21 08:11:28.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/PurchaseRequests - null null
+2026-09-21 08:11:28.645 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API)'
+2026-09-21 08:11:28.712 +03:00 [INF] HTTP GET /api/PurchaseRequests responded 200 in 1010.8018 ms
+2026-09-21 08:11:28.705 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API)'
+2026-09-21 08:11:28.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/PurchaseRequests - 200 null application/json; charset=utf-8 1064.221ms
+2026-09-21 08:11:28.727 +03:00 [INF] Route matched with {action = "GetAll", controller = "PurchaseRequests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MiniERP.API.DTOs.PurchaseRequestDto]]] GetAll() on controller MiniERP.API.Controllers.PurchaseRequestsController (MiniERP.API).
+2026-09-21 08:11:28.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/Dashboard/summary - null null
+2026-09-21 08:11:28.751 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API)'
+2026-09-21 08:11:28.815 +03:00 [INF] Route matched with {action = "GetSummary", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MiniERP.API.DTOs.DashboardSummaryDto]] GetSummary(System.Nullable`1[System.Int32]) on controller MiniERP.API.Controllers.DashboardController (MiniERP.API).
+2026-09-21 08:11:32.364 +03:00 [INF] Executed DbCommand (3,354ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[DepoId], [p].[MinStockQuantity], [p].[MinimumStock], [p].[ProductCode], [p].[ProductName], [p].[StockQuantity], [p].[UnitPrice]
+FROM [Products] AS [p]
+2026-09-21 08:11:32.616 +03:00 [INF] Executed DbCommand (3,872ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[Description], [p].[ProductId], [p].[Quantity], [p].[RejectionReason], [p].[RequestDate], [p].[RequestNo], [p].[RequestedByUserId], [p].[Status], [p0].[Id], [p0].[CategoryId], [p0].[DepoId], [p0].[MinStockQuantity], [p0].[MinimumStock], [p0].[ProductCode], [p0].[ProductName], [p0].[StockQuantity], [p0].[UnitPrice]
+FROM [PurchaseRequests] AS [p]
+INNER JOIN [Products] AS [p0] ON [p].[ProductId] = [p0].[Id]
+2026-09-21 08:11:32.616 +03:00 [INF] Executed DbCommand (237ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[Description], [p].[ProductId], [p].[Quantity], [p].[RejectionReason], [p].[RequestDate], [p].[RequestNo], [p].[RequestedByUserId], [p].[Status], [p0].[Id], [p0].[CategoryId], [p0].[DepoId], [p0].[MinStockQuantity], [p0].[MinimumStock], [p0].[ProductCode], [p0].[ProductName], [p0].[StockQuantity], [p0].[UnitPrice]
+FROM [PurchaseRequests] AS [p]
+INNER JOIN [Products] AS [p0] ON [p].[ProductId] = [p0].[Id]
+2026-09-21 08:11:32.720 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MiniERP.API.DTOs.PurchaseRequestDto, MiniERP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-21 08:11:32.738 +03:00 [INF] Executed action MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API) in 3995.9945ms
+2026-09-21 08:11:32.742 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API)'
+2026-09-21 08:11:32.744 +03:00 [INF] HTTP GET /api/PurchaseRequests responded 200 in 4039.3231 ms
+2026-09-21 08:11:32.747 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/PurchaseRequests - 200 null application/json; charset=utf-8 4209.3095ms
+2026-09-21 08:11:44.634 +03:00 [INF] Executed DbCommand (11,765ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[OrderDate], [o].[OrderNo], [o].[PurchaseRequestId], [o].[Status], [o].[SupplierId], [o].[TotalAmount]
+FROM [Orders] AS [o]
+2026-09-21 08:11:44.754 +03:00 [INF] Start processing HTTP request GET https://api.frankfurter.app/latest?*
+2026-09-21 08:11:44.767 +03:00 [INF] Sending HTTP request GET https://api.frankfurter.app/latest?*
+2026-09-21 08:11:49.699 +03:00 [INF] Received HTTP response headers after 4921.6784ms - 200
+2026-09-21 08:11:49.714 +03:00 [INF] End processing HTTP request after 4969.1901ms - 200
+2026-09-21 08:11:49.880 +03:00 [INF] Executing OkObjectResult, writing value of type 'MiniERP.API.DTOs.DashboardSummaryDto'.
+2026-09-21 08:11:49.908 +03:00 [INF] Executed action MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API) in 20977.5107ms
+2026-09-21 08:11:49.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/Dashboard/summary - null null
+2026-09-21 08:11:49.923 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API)'
+2026-09-21 08:11:49.929 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API)'
+2026-09-21 08:11:49.930 +03:00 [INF] HTTP GET /api/Dashboard/summary responded 200 in 21179.6077 ms
+2026-09-21 08:11:49.938 +03:00 [INF] Route matched with {action = "GetSummary", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MiniERP.API.DTOs.DashboardSummaryDto]] GetSummary(System.Nullable`1[System.Int32]) on controller MiniERP.API.Controllers.DashboardController (MiniERP.API).
+2026-09-21 08:11:49.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/Dashboard/summary - 200 null application/json; charset=utf-8 21200.7321ms
+2026-09-21 08:12:41.910 +03:00 [INF] MiniERP API Başlatılıyor...
+2026-09-21 08:12:43.991 +03:00 [INF] User profile is available. Using 'C:\Users\emine\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-21 08:12:44.964 +03:00 [INF] Now listening on: https://localhost:7266
+2026-09-21 08:12:44.997 +03:00 [INF] Now listening on: http://localhost:5257
+2026-09-21 08:12:46.622 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-21 08:12:46.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/ - null null
+2026-09-21 08:12:46.733 +03:00 [INF] Hosting environment: Development
+2026-09-21 08:12:46.761 +03:00 [INF] Content root path: C:\Users\emine\source\repos\MiniERP.API\MiniERP.API
+2026-09-21 08:12:48.690 +03:00 [INF] The file /index.html was not modified
+2026-09-21 08:12:48.743 +03:00 [INF] HTTP GET /index.html responded 304 in 1348.1981 ms
+2026-09-21 08:12:48.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/index.html - 304 null text/html 2401.8239ms
+2026-09-21 08:12:51.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-21 08:12:51.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/app.js?v=200 - null null
+2026-09-21 08:12:51.549 +03:00 [INF] The file /app.js was not modified
+2026-09-21 08:12:51.612 +03:00 [INF] HTTP GET /app.js responded 304 in 195.7476 ms
+2026-09-21 08:12:51.617 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/app.js?v=200 - 304 null text/javascript 217.8767ms
+2026-09-21 08:12:51.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 260.608ms
+2026-09-21 08:12:52.077 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_vs/browserLink - null null
+2026-09-21 08:12:53.518 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1440.6932ms
+2026-09-21 08:12:54.574 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/favicon.ico - null null
+2026-09-21 08:12:55.001 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 40.9620 ms
+2026-09-21 08:12:55.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/favicon.ico - 404 0 null 820.4636ms
+2026-09-21 08:12:55.493 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7266/favicon.ico, Response status code: 404
+2026-09-21 08:13:04.261 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7266/api/Auth/login - application/json 51
+2026-09-21 08:13:04.341 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 08:13:04.481 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniERP.API.DTOs.LoginDto) on controller MiniERP.API.Controllers.AuthController (MiniERP.API).
+2026-09-21 08:13:06.991 +03:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:13:07.027 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:13:07.047 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:13:07.093 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 08:13:09.965 +03:00 [INF] Executed DbCommand (582ms) [Parameters=[@loginDto_Email='?' (Size = 4000), @loginDto_Password='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedDate], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[RoleId], [r].[Id], [r].[RoleName]
+FROM [Users] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[Email] = @loginDto_Email AND [u].[PasswordHash] = @loginDto_Password
+2026-09-21 08:13:10.439 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-21 08:13:10.467 +03:00 [INF] Executed action MiniERP.API.Controllers.AuthController.Login (MiniERP.API) in 5955.0827ms
+2026-09-21 08:13:10.470 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 08:13:10.481 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 6142.0991 ms
+2026-09-21 08:13:10.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/Products - null null
+2026-09-21 08:13:10.506 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7266/api/Auth/login - 200 null application/json; charset=utf-8 6245.2816ms
+2026-09-21 08:13:10.685 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API)'
+2026-09-21 08:13:10.712 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MiniERP.API.DTOs.ProductDto]]] GetProducts() on controller MiniERP.API.Controllers.ProductsController (MiniERP.API).
+2026-09-21 08:13:11.742 +03:00 [INF] Executed DbCommand (461ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[DepoId], [p].[MinStockQuantity], [p].[MinimumStock], [p].[ProductCode], [p].[ProductName], [p].[StockQuantity], [p].[UnitPrice]
+FROM [Products] AS [p]
+2026-09-21 08:13:11.892 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MiniERP.API.DTOs.ProductDto, MiniERP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-21 08:13:11.974 +03:00 [INF] Executed action MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API) in 1257.7595ms
+2026-09-21 08:13:12.000 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.ProductsController.GetProducts (MiniERP.API)'
+2026-09-21 08:13:12.009 +03:00 [INF] HTTP GET /api/Products responded 200 in 1490.1651 ms
+2026-09-21 08:13:12.014 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/Products - 200 null application/json; charset=utf-8 1518.8026ms
+2026-09-21 08:13:12.043 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/PurchaseRequests - null null
+2026-09-21 08:13:12.050 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API)'
+2026-09-21 08:13:12.079 +03:00 [INF] Route matched with {action = "GetAll", controller = "PurchaseRequests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MiniERP.API.DTOs.PurchaseRequestDto]]] GetAll() on controller MiniERP.API.Controllers.PurchaseRequestsController (MiniERP.API).
+2026-09-21 08:13:12.674 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[Description], [p].[ProductId], [p].[Quantity], [p].[RejectionReason], [p].[RequestDate], [p].[RequestNo], [p].[RequestedByUserId], [p].[Status], [p0].[Id], [p0].[CategoryId], [p0].[DepoId], [p0].[MinStockQuantity], [p0].[MinimumStock], [p0].[ProductCode], [p0].[ProductName], [p0].[StockQuantity], [p0].[UnitPrice]
+FROM [PurchaseRequests] AS [p]
+INNER JOIN [Products] AS [p0] ON [p].[ProductId] = [p0].[Id]
+2026-09-21 08:13:12.853 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MiniERP.API.DTOs.PurchaseRequestDto, MiniERP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-21 08:13:12.885 +03:00 [INF] Executed action MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API) in 776.2518ms
+2026-09-21 08:13:12.892 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.PurchaseRequestsController.GetAll (MiniERP.API)'
+2026-09-21 08:13:12.895 +03:00 [INF] HTTP GET /api/PurchaseRequests responded 200 in 846.4318 ms
+2026-09-21 08:13:12.899 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/PurchaseRequests - 200 null application/json; charset=utf-8 855.2584ms
+2026-09-21 08:13:12.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/api/Dashboard/summary - null null
+2026-09-21 08:13:13.125 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API)'
+2026-09-21 08:13:13.292 +03:00 [INF] Route matched with {action = "GetSummary", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MiniERP.API.DTOs.DashboardSummaryDto]] GetSummary(System.Nullable`1[System.Int32]) on controller MiniERP.API.Controllers.DashboardController (MiniERP.API).
+2026-09-21 08:13:13.722 +03:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[DepoId], [p].[MinStockQuantity], [p].[MinimumStock], [p].[ProductCode], [p].[ProductName], [p].[StockQuantity], [p].[UnitPrice]
+FROM [Products] AS [p]
+2026-09-21 08:13:13.802 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[Description], [p].[ProductId], [p].[Quantity], [p].[RejectionReason], [p].[RequestDate], [p].[RequestNo], [p].[RequestedByUserId], [p].[Status], [p0].[Id], [p0].[CategoryId], [p0].[DepoId], [p0].[MinStockQuantity], [p0].[MinimumStock], [p0].[ProductCode], [p0].[ProductName], [p0].[StockQuantity], [p0].[UnitPrice]
+FROM [PurchaseRequests] AS [p]
+INNER JOIN [Products] AS [p0] ON [p].[ProductId] = [p0].[Id]
+2026-09-21 08:13:14.686 +03:00 [INF] Executed DbCommand (835ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[OrderDate], [o].[OrderNo], [o].[PurchaseRequestId], [o].[Status], [o].[SupplierId], [o].[TotalAmount]
+FROM [Orders] AS [o]
+2026-09-21 08:13:15.115 +03:00 [INF] Start processing HTTP request GET https://api.frankfurter.app/latest?*
+2026-09-21 08:13:15.209 +03:00 [INF] Sending HTTP request GET https://api.frankfurter.app/latest?*
+2026-09-21 08:13:16.876 +03:00 [INF] Received HTTP response headers after 1629.7718ms - 200
+2026-09-21 08:13:16.926 +03:00 [INF] End processing HTTP request after 1812.6874ms - 200
+2026-09-21 08:13:17.012 +03:00 [INF] Executing OkObjectResult, writing value of type 'MiniERP.API.DTOs.DashboardSummaryDto'.
+2026-09-21 08:13:17.480 +03:00 [INF] Executed action MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API) in 4149.2394ms
+2026-09-21 08:13:17.502 +03:00 [INF] Executed endpoint 'MiniERP.API.Controllers.DashboardController.GetSummary (MiniERP.API)'
+2026-09-21 08:13:17.504 +03:00 [INF] HTTP GET /api/Dashboard/summary responded 200 in 4385.6892 ms
+2026-09-21 08:13:17.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/api/Dashboard/summary - 200 null application/json; charset=utf-8 4563.1259ms
+2026-09-21 11:24:26.032 +03:00 [INF] MiniERP API Başlatılıyor...
+2026-09-21 11:24:26.888 +03:00 [INF] User profile is available. Using 'C:\Users\emine\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-21 11:24:34.611 +03:00 [INF] Now listening on: https://localhost:7266
+2026-09-21 11:24:34.632 +03:00 [INF] Now listening on: http://localhost:5257
+2026-09-21 11:24:58.850 +03:00 [INF] MiniERP API Başlatılıyor...
+2026-09-21 11:24:59.451 +03:00 [INF] User profile is available. Using 'C:\Users\emine\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-21 11:25:01.067 +03:00 [INF] Now listening on: https://localhost:7266
+2026-09-21 11:25:01.087 +03:00 [INF] Now listening on: http://localhost:5257
+2026-09-21 11:25:01.572 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-21 11:25:01.660 +03:00 [INF] Hosting environment: Development
+2026-09-21 11:25:01.722 +03:00 [INF] Content root path: C:\Users\emine\source\repos\MiniERP.API\MiniERP.API
+2026-09-21 11:25:10.178 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/ - null null
+2026-09-21 11:25:19.007 +03:00 [INF] The file /index.html was not modified
+2026-09-21 11:25:19.076 +03:00 [INF] HTTP GET /index.html responded 304 in 599.5448 ms
+2026-09-21 11:25:19.169 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/index.html - 304 null text/html 9221.3173ms
+2026-09-21 11:25:19.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-21 11:25:19.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/app.js?v=200 - null null
+2026-09-21 11:25:19.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/_vs/browserLink - null null
+2026-09-21 11:25:19.516 +03:00 [INF] The file /app.js was not modified
+2026-09-21 11:25:19.534 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 184.3035ms
+2026-09-21 11:25:19.555 +03:00 [INF] HTTP GET /app.js responded 304 in 98.1441 ms
+2026-09-21 11:25:19.602 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/app.js?v=200 - 304 null text/javascript 252.3505ms
+2026-09-21 11:25:20.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1500.8031ms
+2026-09-21 11:25:20.978 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7266/favicon.ico - null null
+2026-09-21 11:25:21.088 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 29.8849 ms
+2026-09-21 11:25:21.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7266/favicon.ico - 404 0 null 121.8913ms
+2026-09-21 11:25:21.136 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7266/favicon.ico, Response status code: 404
+2026-09-21 11:25:48.053 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7266/api/Auth/login - application/json 51
+2026-09-21 11:25:48.185 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 11:25:48.495 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniERP.API.DTOs.LoginDto) on controller MiniERP.API.Controllers.AuthController (MiniERP.API).
+2026-09-21 11:25:55.618 +03:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 11:25:55.636 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 11:25:55.641 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 11:25:55.649 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-21 11:26:06.951 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7266/api/Auth/login - application/json 51
+2026-09-21 11:26:07.133 +03:00 [INF] Executing endpoint 'MiniERP.API.Controllers.AuthController.Login (MiniERP.API)'
+2026-09-21 11:26:07.242 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniERP.API.DTOs.LoginDto) on controller MiniERP.API.Controllers.AuthController (MiniERP.API).
+2026-09-21 11:26:22.335 +03:00 [ERR] An error occurred using the connection to database 'MiniERP' on server '.\SQLEXPRESS'.
+2026-09-21 11:26:23.017 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MiniERP.API.Data.MiniERPDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Bağlantı Zaman Aşımı Süresi Doldu.  Oturum açma sonrası aşamada zaman aşımı süresi doldu.  Bağlantı sunucunun oturum açma işlemini tamamlaması ve yanıt vermesi için beklerken veya birden fazla etkin bağlantı oluşturmaya çalışırken zaman aşımına uğramış olabilir.  Bu sunucuya bağlanmaya çalışırken harcanan süre - [Oturum Açma Öncesi] başlatma=1; el sıkışma=13; [Oturum Açma] başlatma=0; kimlik doğrulaması=2; [Oturum Açma Sonrası] tamamlandı=14456; 
+ ---> System.ComponentModel.Win32Exception (258): Bekleme işlem zamanı aşıldı.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3dc791fc-deb4-4416-a9fb-628ad78150bc
+Hata Numarası: -2,Durum: 0,Sınıf:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Bağlantı Zaman Aşımı Süresi Doldu.  Oturum açma sonrası aşamada zaman aşımı süresi doldu.  Bağlantı sunucunun oturum açma işlemini tamamlaması ve yanıt vermesi için beklerken veya birden fazla etkin bağlantı oluşturmaya çalışırken zaman aşımına uğramış olabilir.  Bu sunucuya bağlanmaya çalışırken harcanan süre - [Oturum Açma Öncesi] başlatma=1; el sıkışma=13; [Oturum Açma] başlatma=0; kimlik doğrulaması=2; [Oturum Açma Sonrası] tamamlandı=14456; 
+ ---> System.ComponentModel.Win32Exception (258): Bekleme işlem zamanı aşıldı.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3dc791fc-deb4-4416-a9fb-628ad78150bc
+Hata Numarası: -2,Durum: 0,Sınıf:11

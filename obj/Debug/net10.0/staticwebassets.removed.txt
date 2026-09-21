@@ -1,0 +1,2 @@
+C:\Users\emine\source\repos\MiniERP.API\MiniERP.API\wwwroot\app.js
+C:\Users\emine\source\repos\MiniERP.API\MiniERP.API\wwwroot\index.html
